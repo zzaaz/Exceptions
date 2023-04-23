@@ -30,8 +30,6 @@ public class Utils {
             }
         } catch (NumberFormatException ex) {
             System.out.println(String.format("ERROR: String '%s' is not written in a form of an integer", numString));
-        } catch (ArithmeticException ex) {
-            System.out.println(String.format("caught arithmetic exception: %s", ex.getMessage()));
         }
         return array;
     }

@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class Main {
     private static final String myFile = "src/file.txt";
+
     public static void main(String[] args) throws FileNotFoundException {
         try {
             System.out.println(Arrays.toString(Utils.readFromFile(myFile)));
@@ -12,6 +13,8 @@ public class Main {
             System.out.println(ex.getErrorCode());
             System.out.println(ex.getErrorSourceClass());
             System.out.println(ex.getSuggestion());
+        } catch (ArithmeticException ex) {
+            System.out.println(String.format("caught arithmetic exception: %s", ex.getMessage()));
         }
     }
 }
